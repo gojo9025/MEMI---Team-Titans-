@@ -1,66 +1,19 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import "./globals.css";
+import MemeGenerator from "../components/MemeGenerator";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main style={{ padding: '2rem', maxWidth: '1400px', margin: '0 auto', width: '100%' }}>
+      <header style={{ marginBottom: '3rem', textAlign: 'center' }} className="animate-fade-in">
+        <h1 className="title-gradient" style={{ fontSize: '3.5rem', marginBottom: '1rem', letterSpacing: '-0.02em', lineHeight: '1.2' }}>Meme-to-Knowledge Converter</h1>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '1.2rem', maxWidth: '800px', margin: '0 auto', lineHeight: '1.6' }}>
+          Gen-Z users often ignore important academic or institutional updates. This tool converts important information like exam dates, circulars, or announcements into engaging meme-style content to improve reach and retention.
+        </p>
+      </header>
+
+      <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <MemeGenerator />
+      </div>
+    </main>
   );
 }

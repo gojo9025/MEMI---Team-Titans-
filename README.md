@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 Meme-to-Knowledge Engine (TITANS Framework)
 
-## Getting Started
+A highly advanced, NotebookLM-style Gen-Z learning engine that natively converts boring academic documents (PDFs, PPTXs, DOCs) and Live Web Pages into highly engaging, dynamic meme formats and TikTok-ready Video Chapters.
 
-First, run the development server:
+This application runs **100% Locally & Offline**, powered by a localized instance of Ollama to bypass API tracking, internet requirements, and rate limits during demonstrations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Core Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*   **📚 NotebookLM-Style Architecture**: Clean "Sources Sidebar" where you can actively bulk upload multiple PDFs, PowerPoints, DOCX files, TXTs, or Images into an active conversational context!
+*   **🌐 Live Knowledge Scraper**: Just paste a URL directly into the knowledge base. A custom Cheerio-powered backend connects to the web, strips out ads, extracts the core content body, and injects it into Ollama's active virtual context.
+*   **📱 Native TikTok/StudyTok Exporter**: Instantly distill massive articles or syllabuses into a feed of multiple sequential memes ("StudyTok Chapters"), and click Export to watch the app render a fully animated 1080p WebM/MP4 `.mp4` camera-panning reel natively inside the browser via the Canvas API!
+*   **🌍 Multilingual Native Output**: Generate contextual memes fully translated into Hindi, Tamil, Telugu, Spanish, French, natively by the LLM (without third-party translate services).
+*   **🎭 Custom Template Integration**: Readily maps text onto 30+ custom local templates, complete with dynamic coordinate text-wrapping mathematical bounding logic that shrinks text if it overflows perfectly! Includes support for Animated GIF Overlays.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Setup Instructions
 
-## Learn More
+### 1. Requirements
+*   **Node.js 18+**
+*   **Ollama Installed locally**
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Local AI Configuration
+Because this engine relies on a local language model keeping everything completely private, you must first ensure Ollama is running.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open your terminal and install the specific model required to match the configured prompting framework:
+   ```bash
+   ollama run qwen3:8b
+   ```
+2. Leave the Ollama application running silently in the background (or system tray). Next.js requires it listening on `http://127.0.0.1:11434`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Running the App
+1. Clone this repository.
+2. Install the necessary Next.js packages:
+   ```bash
+   npm install
+   ```
+3. Start the Turbopack dev server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to experience the engine!
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💻 Tech Stack
+- Frontend: `Next.js 14`, `React`, `HTML Canvas API`, `MediaRecorder API`
+- Backend: `Next.js App Server`, `Cheerio` (Web Scraping) 
+- Parser Pipeline: `pdf-parse`, `mammoth`, `officeparser`
+- AI/Inference Engine: `Ollama Native (qwen3:8b)`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+*A game-changing architecture blending educational content absorption with Gen-Z consumption speeds.*
