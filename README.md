@@ -1,4 +1,4 @@
-# 🧠 Meme-to-Knowledge Engine (TITANS Framework)
+# Meme-to-Knowledge Engine (TITANS Framework)
 
 A highly advanced, NotebookLM-style Gen-Z learning engine that natively converts boring academic documents (PDFs, PPTXs, DOCs) and Live Web Pages into highly engaging, dynamic meme formats and TikTok-ready Video Chapters.
 
@@ -14,7 +14,7 @@ This application runs **100% Locally & Offline**, powered by a localized instanc
 
 ---
 
-## 🚀 Setup Instructions
+## Setup Instructions
 
 ### 1. Requirements
 *   **Node.js 18+**
@@ -43,7 +43,7 @@ Because this engine relies on a local language model keeping everything complete
 
 ---
 
-## 💻 Tech Stack
+## Tech Stack
 - Frontend: `Next.js 14`, `React`, `HTML Canvas API`, `MediaRecorder API`
 - Backend: `Next.js App Server`, `Cheerio` (Web Scraping) 
 - Parser Pipeline: `pdf-parse`, `mammoth`, `officeparser`
